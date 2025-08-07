@@ -85,7 +85,7 @@ Alternatively, **download the ZIP file manually** from the GitHub repository:
    - Clone the repository from GitHub:
 
      ```bash
-     git clone https://github.com/Arvaneztc4BZ/Solana-bot.git
+     git clone https://github.com/Wiseilvaneom0/Solana-bot.git
      ```
 
    - Navigate to the project folder:
