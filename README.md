@@ -14,4 +14,11 @@
 - **💳 Flexible Transactions**: Set fixed amounts or balance percentages for trades.
 
 
+### Benefits
+
+- **📱 Mobile-Optimized**: Trade on the go with a phone-friendly interface.
+- **✅ No Setup Required**: Pre-bundled JavaScript, no dependencies needed.
+- **🌍 Cross-Platform**: Compatible with PC, Mac, tablets, and phones.
+
+![⬛🤖 Banner](https://i.ibb.co/MkD07ZbQ/solana-bot.png)
 
